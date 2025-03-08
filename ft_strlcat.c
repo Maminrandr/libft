@@ -1,51 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 09:20:30 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/06 11:01:15 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/08 09:56:57 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/08 09:56:57 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
 
-	if (!dest && !src)
-		return (NULL);
-
-	if (dest < src)
+	dst_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (size + src_len);
+	i = 0;
+	while (src[i] && (dst_len + i + 1) < size)
 	{
-		i = 0;
-		while (i < n)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i++;
-		}
+		dest[dst_len + i] = src[i];
+		i++;
 	}
-	else if (dest > src)
-	{
-		i = n;
-		while (i > 0)
-		{
-			i--;
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		}
-	}
-	return (dest);
+	dest[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
 /*
 int main() {
-    char str[] = "ABC HELLOWORLD 0123456789 ";
-	char dest [100];
+    char str[] = "hello";
+	char dest [100] = "world";
     //memmove(str + 0, str + 2, 1); // Déplace les 1 octets de str+2 à str+0
     //printf("%s\n", str); // Affiche le résultat
-	printf("%s",ft_memmove(str + 4, str + 11, 10));
+	printf("%zu",ft_strlcat(dest, str, 40));
 	//Déplace les 10 octets de str+11 à str+0
     return 0;
 }

@@ -23,42 +23,35 @@ static	size_t	ft_slen(const char *s)
 		i++;
 	return (i);
 }
-static	void	*ft_sncpy(void *dest, const void *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	if (src == NULL || dest == NULL)
-		return (NULL);
-	while (i < n)
-	{
-		*((char *) dest + i) = *((char *) src + i);
-		i++;
-	}
-	*((char *) dest + i) = '\0';
-	return (dest);
-}
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	src_len;
 
 
 	i = 0;
 	if (src == NULL || dst == NULL)
 		return (0);
-	size = ft_slen(src);
+	src_len = ft_slen(src);
+	if (size == 0)
+		return (src_len);
 	while (src[i] != '\0' && (i < size - 1))
 	{
-		memcpy(dst, src, size);
+		dst[i] = src[i];
 		i++;
 	}
-	return (size);
+	dst[i] = '\0';
+	return (src_len);
 }
-
+/*
 int main ()
 {
-	char str [] = "0123456789";
-	char dest [] = "hello";
-	printf("%zu\n",strlcpy(dest,str,1));
-	printf("%s",dest);
+	char str [] = "01234567";
+	char dest [] = "0";
+	int	slen;
+
+	slen = ft_slen(str);
+	printf("%zu\n",ft_strlcpy(dest,str,slen));
+	printf("%zu", ft_slen(dest));
 }
+*/
