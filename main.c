@@ -6,16 +6,13 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 19:23:28 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/08 19:23:28 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/10 16:58:47 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
+int	main(void)
 {
-	char str1 [] = "de";
-	char str2 [] = "af";
-
-	printf("%d", ft_strncmp(str1,str2, 4));
+	printf ("Hello World");
 }

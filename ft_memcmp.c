@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/08 11:07:39 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/10 12:05:00 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/10 10:07:31 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/10 12:49:14 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	len;
+	size_t	i;
 
-	len = ft_strlen(s);
-	while (len > 0)
+	i = 0;
+	while (i < n && (*(unsigned char *)(s1 + i) == (*(unsigned char *)(s2
+			+ i))))
+		i++;
+	if (i < n)
 	{
-		if (s[len - 1] == (char)c)
-			return ((char *)(s + len - 1));
-		len--;
-	}
-	if (s[len] == (char)c)
-	{
-		return ((char *)(s + len));
-	}
-	return (NULL);
-}
-/*
-int	main(void) {
-	const char *str = "coucou oi";
-	char *ptr = ft_strrchr(str, 'c');
-
-	if (ptr) {
-		printf("Trouvé : %s\n", ptr);
-	} else {
-		printf("Caractere non trouve\n");
+		return (*(unsigned char *)(s1 + i) - (*(unsigned char *)(s2 + i)));
 	}
 	return (0);
 }
-*/

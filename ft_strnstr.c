@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/08 11:07:39 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/10 12:05:00 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/10 13:29:25 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/10 16:12:18 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	len;
+	size_t	i;
+	size_t	j;
+	char	*cbig;
+	char	*clittle;
 
-	len = ft_strlen(s);
-	while (len > 0)
+	i = 0;
+	j = 0;
+	cbig = (char *)big;
+	clittle = (char *)little;
+	if (little[j] == '\0')
+		return (cbig);
+	while (cbig[i] != '\0' && (i < len))
 	{
-		if (s[len - 1] == (char)c)
-			return ((char *)(s + len - 1));
-		len--;
-	}
-	if (s[len] == (char)c)
-	{
-		return ((char *)(s + len));
+		while (clittle[j] != '\0' && (cbig[i + j] == clittle[j]))
+		{
+			j++;
+			if (clittle[j] == '\0')
+			{
+				return (&cbig[i]);
+			}
+		}
+		j = 0;
+		i++;
 	}
 	return (NULL);
 }
-/*
-int	main(void) {
-	const char *str = "coucou oi";
-	char *ptr = ft_strrchr(str, 'c');
-
-	if (ptr) {
-		printf("Trouvé : %s\n", ptr);
-	} else {
-		printf("Caractere non trouve\n");
-	}
-	return (0);
-}
-*/

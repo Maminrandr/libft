@@ -10,3 +10,6 @@ avec linux :
 	make clean
 	make fclean
 	make re
+
+pour libft.a : 
+	ar rcs libft.a /*ou $(NAME)*/ $(OBJS)

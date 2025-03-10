@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 09:20:30 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/06 11:01:15 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/10 11:14:57 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (NULL);
-
 	if (dest < src)
 	{
 		i = 0;
@@ -40,13 +39,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-int main() {
-    char str[] = "ABC HELLOWORLD 0123456789 ";
+int	main(void) {
+	char str[] = "ABC HELLOWORLD 0123456789 ";
 	char dest [100];
-    //memmove(str + 0, str + 2, 1); // Déplace les 1 octets de str+2 à str+0
-    //printf("%s\n", str); // Affiche le résultat
+	//memmove(str + 0, str + 2, 1); // Déplace les 1 octets de str+2 à str+0
+	//printf("%s\n", str); // Affiche le résultat
 	printf("%s",ft_memmove(str + 4, str + 11, 10));
 	//Déplace les 10 octets de str+11 à str+0
-    return 0;
+	return (0);
 }
 */
