@@ -1,19 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/08 19:23:28 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/11 16:19:27 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/11 15:03:58 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/11 16:20:49 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char str[] = "01234567890123456789";
-	printf("%s", ft_substr(str, 5, 21));
+	char	*str;
+	size_t	slen;
+	size_t	i;
+
+	i = 0;
+	slen = ft_strlen(s);
+	if (slen > len)
+		str = malloc(len + 1);
+	else
+		str = malloc(slen + 1);
+	if (!str)
+	{
+		return (NULL);
+	}
+	while (start <= len)
+	{
+		*(str + i) = *((char *)s + start);
+		start++;
+		i++;	
+	}
+	str[i] = '\0';
+	return (str);
 }
