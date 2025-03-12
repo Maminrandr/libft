@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 13:22:25 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/11 16:23:19 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/12 16:10:41 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_itoa(int n);
+
 
 #endif

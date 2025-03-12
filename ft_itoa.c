@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/08 19:23:28 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/12 15:51:12 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/12 16:01:14 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/12 16:27:48 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
+char	*ft_itoa(int n)
 {
-	char str[] = "bcdaba";
-	printf("%s", ft_strtrim(str, "a"));
+	char	*str;
+	
+	str = malloc(sizeof (int) * sizeof(n) + 1);
+	if (!str)
+	{
+		return (NULL);
+	}
+	while (n)
+	{
+		if (n)
+		{
+			/* code */
+		}
+	}
 }
