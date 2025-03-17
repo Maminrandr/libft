@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 09:20:30 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/10 11:14:57 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/17 17:10:11 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!dest && !src)
+	if (!dest || !src)
 		return (NULL);
 	if (dest < src)
 	{
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	else if (dest > src)
+	else 
 	{
 		i = n;
 		while (i > 0)

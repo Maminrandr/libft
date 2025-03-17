@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/12 10:27:32 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/17 11:39:33 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/17 16:58:00 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/17 17:01:54 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	debut;
-	size_t	fin;
-	size_t	str_len;
-
-	debut = 0;
-	fin = ft_strlen(s1);
-	while (s1[debut] && ft_strchr(set, s1[debut]))
-		debut++;
-	while (fin > debut && ft_strchr(set, s1[fin - 1]))
-		fin--;
-	str_len = fin - debut;
-	if (str_len == 0)
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n < 0)
 	{
-		return (ft_substr(s1, 0, 0));
+		write(fd, "-", 1);
+		ft_putnbr_fd (n * (-1), fd);
 	}
-	return (ft_substr(s1, debut, str_len));
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+	{
+		n = n + '0';
+		write(fd, &n, 1);
+	}
 }

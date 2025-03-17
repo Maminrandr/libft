@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 10:09:07 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/05 15:26:48 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/17 17:08:13 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	i = 0;
 	cast = (char *) s;
-	while (i < n && cast[i] != '\0')
+	while (i < n)
 	{
 		cast[i] = c;
 		i++;
 	}
-	return (cast);
+	return (s);
 }
 /*
 #include <stdio.h>

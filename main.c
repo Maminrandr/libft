@@ -6,18 +6,31 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 19:23:28 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/12 15:51:12 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:13:19 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-
-int main()
+char tolupper(unsigned int index, char c)
 {
-    char    *str;
+    (void)index; // 
+    return (char)toupper(c);
+}
 
-    str = ft_itoa(-1233455);
-    printf("%s",str);
+int main() {
+    char str[] = "bonjour";
+    char *result = ft_strmapi(str, tolupper);
+
+    if (result)
+    {
+        printf("Résultat : %s\n", result);
+        free(result);
+    }
+    else
+    {
+        printf("Erreur d'allocation mémoire.\n");
+    }
+
+    return 0;
 }
