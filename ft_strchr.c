@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 10:27:58 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/10 12:01:43 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/19 02:09:34 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,15 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
+	char	*str;
 
 	i = 0;
-	while (s[i] != '\0')
+	str = (char *)s;
+	while (str[i] != (char)c)
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
+		if (str[i] == '\0')
+			return (NULL);
 		i++;
 	}
-	if (c == '\0')
-		return ((char *)s + i);
-	return (NULL);
+	return (str + i);
 }
-/*
-int	main(void)
-{
-	const char	*str = "coucou toi";
-	char		*ptr;
-
-	ptr = ft_strchr(str, 'o');
-	if (ptr)
-		printf("Trouve : %s\n", ptr);
-	else
-		printf("Non trouvé\n");
-	return (0);
-}
-*/

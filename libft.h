@@ -6,22 +6,16 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 13:22:25 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/17 17:13:28 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/19 02:47:48 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//--------------LES---.H---INTEGRES---------
-# include <ctype.h>
-# include <stddef.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
-//---MES---FONCTIONS---PARTIE I--------
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -45,7 +39,6 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
-//---PARTIE II------------------------
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);

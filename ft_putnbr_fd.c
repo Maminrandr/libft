@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 16:58:00 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/17 17:01:54 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/18 11:13:44 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n < 0)
 	{
 		write(fd, "-", 1);
-		ft_putnbr_fd (n * (-1), fd);
+		ft_putnbr_fd(n * (-1), fd);
 	}
 	else if (n > 9)
 	{

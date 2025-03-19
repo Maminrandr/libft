@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 16:40:10 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/17 16:46:24 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/18 11:13:42 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		write(fd, &s[i] ,1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

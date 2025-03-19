@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 11:50:49 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/10 12:11:51 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/18 15:48:52 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	src_len;
 
 	i = 0;
-	if (src == NULL || dst == NULL)
-		return (0);
 	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
