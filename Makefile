@@ -8,25 +8,26 @@ SRCS = 		ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.
 			ft_strdup.c ft_calloc.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
-OBJS = 	$(SRCS.o:.c)
+OBJS = $(SRCS:.c=.o)
 
 SRCS_BONUS = ft_lstnew.c ft_lstsize.c ft_lstadd_front.c\
 
-OBJS_BONUS = $(SRCS_BONUS.o:.c)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
-bonus :
-	ar -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 %.o:%.c
 	@$(CC) $(CFLAGS) -c $^ -o $@
+
 $(NAME): $(OBJS)
 	@ar -rcs	$(NAME) $(OBJS)
 
+bonus: $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
 
 clean:
-	@rm -f $(OBJS)
+	@del -f	$(OBJS)
 
 fclean : clean
-	@rm -f $(NAME) 
+	@del -f	$(NAME) 
 re: fclean all
