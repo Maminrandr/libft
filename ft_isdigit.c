@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 11:23:27 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/05 15:26:03 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/21 07:36:27 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-/*int main ()
-{
-	printf("%d", ft_isalpha('l'));
-}
-*/

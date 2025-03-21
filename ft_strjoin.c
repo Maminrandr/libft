@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 16:22:55 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/17 11:40:05 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/21 07:37:22 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,20 +61,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strcat(join, s2);
 	return (join);
 }
-
-/*int main()
-{
-	char	*join;
-
-	char	str1 [] = "hello ";
-	char	str2 [] = "world";
-	join = ft_strjoin(str1,str2);
-	if (!join)
-		return (0);
-	else
-	{
-		printf("%s", join);
-		free(join);
-	}
-}
-*/

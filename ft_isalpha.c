@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 11:04:15 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/04 13:07:48 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/21 07:36:22 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_isalpha(int c)
 	}
 	return (1024);
 }
-/*
-int main()
-{
-	printf("%d",ft_isalpha('2'));
-}
-*/

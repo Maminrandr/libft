@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 16:52:18 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/05 16:55:49 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/21 07:37:52 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,3 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
-/*
-int main ()
-{
-	int c = 'a';
-	
-	printf("%c",ft_tolower(c));	
-}
-*/

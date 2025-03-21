@@ -36,10 +36,4 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-/*
-int main ()
-{
-	char c [] = "12345dfsadf";
-	printf("%d",ft_atoi(c));
-}
-*/
+

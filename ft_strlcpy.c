@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 11:50:49 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/18 15:48:52 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/21 07:37:32 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (src_len);
 }
-/*
-int main ()
-{
-	int	slen;
-
-	char str [] = "01234567";
-	char dest [] = "0";
-	slen = ft_slen(str);
-	printf("%zu\n",ft_strlcpy(dest,str,slen));
-	printf("%zu", ft_slen(dest));
-}
-*/
