@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 11:52:17 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/21 10:16:18 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/21 10:13:34 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/21 10:21:35 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
-{
-	if ((ft_isalpha(c) || ft_isdigit(c)))
-		return (1);
-	return (0);
-}
 int main ()
-
 {
-	printf ("\n ==> %d\n\n",ft_isalnum(' '));
+	char str[] = "     xa     ";
+	char find[] = " x";
+	
+	printf("\n\n==>>{%s}\n\n", ft_strtrim(str,find));	
 }

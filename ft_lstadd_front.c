@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 11:52:17 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/21 10:16:18 by maminran         ###   ########.fr       */
+/*   Created: 2025/03/21 09:08:40 by maminran          #+#    #+#             */
+/*   Updated: 2025/03/21 14:48:50 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if ((ft_isalpha(c) || ft_isdigit(c)))
-		return (1);
-	return (0);
+	new->next = *lst;
+	*lst = new;
 }
-int main ()
 
+int main ()
 {
-	printf ("\n ==> %d\n\n",ft_isalnum(' '));
+	t_list *first = ft_lstnew("first");
+	t_list *second = ft_lstnew("second");
+
+
+	ft_lstadd_front(&first, second);
+	printf("\n\n==>>{%s}\n\n", first->content);
 }

@@ -6,18 +6,18 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 13:22:25 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/21 08:40:33 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/21 14:41:31 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
+# include <stddef.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <string.h>
-#include <stddef.h>
+# include <unistd.h>
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -63,5 +63,6 @@ typedef struct s_list
 }					t_list;
 
 t_list				*ft_lstnew(void *content);
-
+void				ft_lstadd_front(t_list **lst, t_list *new);
+int					ft_lstsize(t_list *lst);
 #endif
